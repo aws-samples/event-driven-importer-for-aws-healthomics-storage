@@ -2,17 +2,12 @@
 
 This is a simple CDK app demonstrating an event-driven architecture that automates importing data into AWS HealthOmics sequence stores when objects are created in Amazon S3.
 
-An example use case for this architecture is when customers routinely migrate large quantities (>=10TiB) of raw sequncing data (e.g. FASTQ files) to AWS and want to leverage AWS HealthOmics sequence stores for low cost, durable, and long-term storage.
-
-
+An example use case for this architecture is when customers routinely migrate large quantities (>=10TiB) of raw sequncing data (e.g. FASTQ files) to AWS in batches. Automating import of this data into AWS HealthOmics sequence stores provides customers with low cost, durable, and long-term storage that is purpose-built for genomics datatypes. Using specific events ensures that data is only imported when a sequencing device (or a group of them) is finished generating data.
 
 ## Prerequisites
 
 * [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install) and all associated dependencies (like NodeJS)
 * An existing Amazon S3 bucket
-
-
-
 
 ## What's deployed
 * An event configuration on the specified S3 bucket
