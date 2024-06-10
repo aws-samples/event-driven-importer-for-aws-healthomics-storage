@@ -1,4 +1,4 @@
-# AWS HealthOmics storage importer
+# Event driven importer for AWS HealthOmics storage
 
 This is a simple CDK app demonstrating an event-driven architecture that automates importing data into AWS HealthOmics sequence stores when objects are created in Amazon S3.
 
@@ -135,7 +135,7 @@ If invoked 10 times each day over a 1 mo (30-days) billing period, this will res
 
 ## Cleanup
 
-If you used the default configuration, where the app created a HealthOmics sequence store named `demo-flowcell-data`, you will need to manually delete all data from it to proceed. To do this:
+If you used the default configuration, the app created a HealthOmics sequence store named `demo-flowcell-data`. You will need to manually delete all data from this sequence store to proceed with cleanup. To do this:
 
 1. Navigate to [Sequence stores in the AWS HealthOmics Console](https://console.aws.amazon.com/omics/home#/sequenceStore).
 2. Under **Sequence stores** click on the name of the sequence store named "demo-flowcell-data". This will open the details page for the sequence store.
